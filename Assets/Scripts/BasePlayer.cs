@@ -21,10 +21,19 @@ public class BasePlayer : MonoBehaviour {
             Player.transform.localPosition = new Vector3((Player.transform.localPosition.x + Speed), Player.transform.localPosition.y, Player.transform.localPosition.z);
         }
 
+        if (Input.GetButtonDown("Jump"))
+        {
+            JumpSpeed = JumpSpeed + Gravity;
+            Player.transform.localPosition = new Vector3(Player.transform.localPosition.x, (Player.transform.localPosition.y + JumpSpeed), Player.transform.localPosition.z);
+
+        }
+
 	}
+
 
     public GameObject Player { get; set; }
     public float Acceleration { get; set; }
+    public float JumpSpeed { get; set; }
     public float Speed { get; set; }
     public float Gravity { get; set; }
     public bool Dead { get; set; }
