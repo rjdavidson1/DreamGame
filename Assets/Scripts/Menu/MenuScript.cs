@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseSheep : MonoBehaviour {
-
-    public GameObject player;
-    
+public class MenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,11 +10,6 @@ public class BaseSheep : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        if (TimeUp == true)
-        {
-
-        }
+	
 	}
-    public bool TimeUp { get; set; }
 }

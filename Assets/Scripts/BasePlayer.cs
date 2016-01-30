@@ -27,7 +27,9 @@ public class BasePlayer : MonoBehaviour {
             Player.transform.localPosition = new Vector3(Player.transform.localPosition.x, (Player.transform.localPosition.y + JumpSpeed), Player.transform.localPosition.z);
 
         }
+
 	}
+
 
     public GameObject Player { get; set; }
     public float Acceleration { get; set; }
