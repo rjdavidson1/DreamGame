@@ -49,4 +49,6 @@ public class Driver  {
     static public float LongestTime { get; set; }
     static public int PlayerLives { get; set; }
 
+    static public GameObject CurrentPlatform { get; set; }
+    static public GameObject Player { get; set; }
 }
