@@ -52,7 +52,7 @@ public class BasePlayer : MonoBehaviour {
         }
         if (col.gameObject.CompareTag("Goat"))
         {
-            Dead = true;
+            Driver.Dead = true;
         }
     }
 
