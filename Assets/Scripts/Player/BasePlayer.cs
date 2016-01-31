@@ -9,14 +9,14 @@ public class BasePlayer : MonoBehaviour {
         Acceleration = 0.05f;
         JumpSpeed = 1.0f;
         Player = gameObject;
-        MaxSpeed = 0.3f;
+        MaxSpeed = 0.05f;
         Driver.Player = Player;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetButton("Run"))
+        if (Input.GetButton("Right"))
         {
             if (Speed < MaxSpeed)
             {
@@ -26,6 +26,17 @@ public class BasePlayer : MonoBehaviour {
                 Speed = MaxSpeed;
             Player.transform.localPosition = new Vector3((Player.transform.localPosition.x + Speed), Player.transform.localPosition.y, Player.transform.localPosition.z);
         }
+        if (Input.GetButton("Left"))
+        {
+            if (Speed < MaxSpeed)
+            {
+                Speed =  Acceleration;
+            }
+            else
+                Speed = MaxSpeed;
+            Player.transform.localPosition = new Vector3((Player.transform.localPosition.x - Speed), Player.transform.localPosition.y, Player.transform.localPosition.z);
+        }
+
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -36,7 +47,7 @@ public class BasePlayer : MonoBehaviour {
 
 	}
 
-    void OnCollision2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Platform"))
         {

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameOver
+  - Alarm
+  - Sheep
+  - Goat
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - GameOver
   - 
   - 
   - 
@@ -44,4 +47,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2885220905
+    locked: 0
+  - name: GameOver
+    uniqueID: 1557075431
     locked: 0

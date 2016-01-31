@@ -36,7 +36,7 @@ public class Driver  {
                 break;
         }
     }
-    public void GameOver (int tryAgain)
+    static public void GameOver (int tryAgain)
     {
         switch (tryAgain){
             case 0: Application.Quit();
@@ -51,6 +51,11 @@ public class Driver  {
 
     static public void playerDied()
     {
+        PlayerLives--;
+        if (PlayerLives <= 0)
+        {
+            GameObject.FindGameObjectWithTag("GameOver").SetActive(true);
+        }
         levelLoad();
     }
     static public void levelBeat()
@@ -58,6 +63,7 @@ public class Driver  {
         CurrentLvl++;
         levelLoad();
     }
+    
     static public int CurrentLvl { get; set; }
     static float LongestTime { get; set; }
     static int PlayerLives { get; set; }
