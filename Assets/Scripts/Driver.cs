@@ -33,6 +33,18 @@ public class Driver  {
                 break;
         }
     }
+    public void GameOver (int tryAgain)
+    {
+        switch (tryAgain){
+            case 0: Application.Quit();
+                break;
+            case 1: SceneManager.LoadScene("Menu");
+                break;
+            default: return;
+
+        }
+        
+    }
     static public int CurrentLvl { get; set; }
     static public float LongestTime { get; set; }
     static public int PlayerLives { get; set; }
