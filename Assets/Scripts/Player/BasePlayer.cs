@@ -48,11 +48,28 @@ public class BasePlayer : MonoBehaviour {
         }
         if (col.gameObject.CompareTag("Sheep"))
         {
-            Driver.SheepCount -= 1;
+            sheepCaptured();
         }
         if (col.gameObject.CompareTag("Goat"))
         {
-            Driver.Dead = true;
+            Dead = true;
+        }
+        if (col.gameObject.CompareTag("Bottom"))
+        {
+            Dead = true;
+        }
+        if (Dead)
+        {
+            Driver.playerDied();
+        }
+    }
+
+    private void sheepCaptured()
+    {
+        SheepCount++;
+        if (SheepCount == Driver.SheepCount)
+        {
+            Driver.levelBeat();
         }
     }
 
@@ -63,5 +80,6 @@ public class BasePlayer : MonoBehaviour {
     public float MaxSpeed { get; set; }
     public float Gravity { get; set; }
     public bool Dead { get; set; }
+    public int SheepCount { get; set; }
 
 }
