@@ -42,6 +42,18 @@ public class BasePlayer : MonoBehaviour {
         {
             Driver.CurrentPlatform = col.gameObject;
         }
+        if (col.gameObject.CompareTag("Alarm"))
+        {
+            Driver.Timer += 5f;
+        }
+        if (col.gameObject.CompareTag("Sheep"))
+        {
+            Driver.SheepCount -= 1;
+        }
+        if (col.gameObject.CompareTag("Goat"))
+        {
+            Dead = true;
+        }
     }
 
     public GameObject Player { get; set; }

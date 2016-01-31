@@ -51,4 +51,7 @@ public class Driver  {
 
     static public GameObject CurrentPlatform { get; set; }
     static public GameObject Player { get; set; }
+    static public float Timer { get; set; }
+    static public int SheepCount { get; set; }
+    static public bool Dead { get; set; }
 }
