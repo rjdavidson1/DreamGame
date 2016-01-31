@@ -19,7 +19,7 @@ public class Driver  {
 
     }
 
-    public void levelLoad()
+    static public void levelLoad()
     {
         switch (CurrentLvl)
         {
@@ -46,8 +46,8 @@ public class Driver  {
         
     }
     static public int CurrentLvl { get; set; }
-    static public float LongestTime { get; set; }
-    static public int PlayerLives { get; set; }
+    static float LongestTime { get; set; }
+    static int PlayerLives { get; set; }
 
     static public GameObject CurrentPlatform { get; set; }
     static public GameObject Player { get; set; }
