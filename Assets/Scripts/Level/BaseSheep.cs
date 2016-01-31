@@ -16,10 +16,13 @@ public class BaseSheep : MonoBehaviour {
 
         if (TimeUp == true)
         {
-
+            gameObject.tag = "Goat";
 
         }
+        else
+            gameObject.tag = "Sheep";
         if (TimeUp==true && Driver.CurrentPlatform.Equals(standingPlatform)){
+
             float platformLeftEdge = (standingPlatform.GetComponent<BoxCollider2D>().size.x / 2f)-standingPlatform.GetComponent<BoxCollider2D>().offset.x;
             float platformRightEdge = (standingPlatform.GetComponent<BoxCollider2D>().size.x / 2f) + standingPlatform.GetComponent<BoxCollider2D>().offset.x;
             if (transform.localPosition.x > platformLeftEdge && transform.localPosition.x < platformRightEdge)

@@ -10,6 +10,9 @@ public class CreditsScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(credits.)
+        if (Input.GetMouseButtonDown(0))
+        {
+
+        }
 	}
 }
