@@ -6,20 +6,23 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        TimeLeft = 30.0f;
+        Driver.Timer = 30.0f;
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
+       
         //Print Time
-        TimeLeft -= Time.deltaTime;
-        if (TimeLeft <= 0)
+        Driver.Timer -= Time.deltaTime;
+        
+        if (Driver.Timer <= 0)
         {
-            TimeLeft = 0;
+            Driver.Timer = 0;
         }
+        
 	}
 
-    public float TimeLeft { get; set;}
+    
     
 }

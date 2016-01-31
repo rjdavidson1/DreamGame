@@ -19,15 +19,18 @@ public class Driver  {
 
     }
 
-    public void levelLoad()
+    static public void levelLoad()
     {
         switch (CurrentLvl)
         {
-            case 0: SceneManager.LoadScene("Level0");
+            case 0: SheepCount = 4;
+                SceneManager.LoadScene("Level0");
                 break;
-            case 1: SceneManager.LoadScene("Level1");
+            case 1:SheepCount = 6;
+                SceneManager.LoadScene("Level1");
                 break;
-            case 2: SceneManager.LoadScene("Level2");
+            case 2:SheepCount = 8;
+                SceneManager.LoadScene("Level2");
                 break;
             default: SceneManager.LoadScene("Level0");
                 break;
@@ -45,10 +48,22 @@ public class Driver  {
         }
         
     }
+
+    static public void playerDied()
+    {
+        levelLoad();
+    }
+    static public void levelBeat()
+    {
+        CurrentLvl++;
+        levelLoad();
+    }
     static public int CurrentLvl { get; set; }
-    static public float LongestTime { get; set; }
-    static public int PlayerLives { get; set; }
+    static float LongestTime { get; set; }
+    static int PlayerLives { get; set; }
 
     static public GameObject CurrentPlatform { get; set; }
     static public GameObject Player { get; set; }
+    static public float Timer { get; set; }
+    static public int SheepCount { get; set; }
 }
