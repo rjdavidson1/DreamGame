@@ -7,6 +7,8 @@ public class BasePlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Acceleration = 0.05f;
+        JumpSpeed = 1.0f;
+        Player = gameObject;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +25,7 @@ public class BasePlayer : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-            JumpSpeed = JumpSpeed + Gravity;
+            //JumpSpeed = JumpSpeed + Gravity;
             Player.transform.localPosition = new Vector3(Player.transform.localPosition.x, (Player.transform.localPosition.y + JumpSpeed), Player.transform.localPosition.z);
 
         }
