@@ -1,0 +1,23 @@
+package FirstPackage;
+
+public class FirstClass {
+
+	static int interger;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int interger;
+		long longInterger;
+		short shortInterger;
+		boolean bool;
+		char character;
+		float floatNumbers;
+		double doubles;
+		
+		interger = FirstClass.interger + FirstClass.interger;
+		
+		System.out.println(interger);
+	}
+
+}

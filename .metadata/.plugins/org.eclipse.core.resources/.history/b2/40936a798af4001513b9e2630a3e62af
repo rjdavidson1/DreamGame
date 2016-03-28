@@ -1,0 +1,27 @@
+package FirstPackage;
+
+
+public class FirstClass {
+
+	static int integer;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int integer = Integer.MAX_VALUE;
+		long longInteger = (long)10;
+		short shortInteger;
+		boolean bool;
+		char character;
+		float floatNumbers;
+		double doubles;
+		
+		//integer = FirstClass.integer + FirstClass.integer;
+		
+		
+		
+		System.out.println(longInteger);
+		System.out.println(integer);
+	}
+
+}
